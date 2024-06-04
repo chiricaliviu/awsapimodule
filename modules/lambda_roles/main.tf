@@ -46,6 +46,8 @@ resource "aws_iam_role_policy_attachment" "lambda_role_policy_attachments" {
    ]):"${entry.policy_name}-${entry.action_name}"=> entry}
   role = "${each.value.policy_name}-${each.value.action_name}-role"
   policy_arn = each.value.policy_arn
+
+  depends_on = [aws_iam_role.lambda_roles]
   
 }
 
