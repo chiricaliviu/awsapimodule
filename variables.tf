@@ -1,22 +1,19 @@
 variable "aws_region" {
   type    = string
-
+  default = "eu-central-1"
 }
 
 variable "access_key" {
   type    = string
-
+  default = "INSERT HERE"
 }
 
 variable "secret_key" {
   type    = string
-
+  default = "INSERT HERE"
 }
 
-variable "api_name" {
-  type    = string
-  default = "RecipeAPIV2"
-}
+
 
 variable "path_diet" {
   type    = string
@@ -68,3 +65,11 @@ variable "table_names" {
   description = "List of DynamoDB tables to create policies for"
   type        = list(string)
 }
+# variable "resources" {
+#   description = "List contains "
+#   type        = list(object({
+#     resource_id   = string
+#     gatewayapi = string
+
+#   }))
+# }
