@@ -1,11 +1,6 @@
 # awsapimodule
-Currently it is still work in progress.
-Currently the dynamic creation works for:
-- tables
-- policies
-- security roles
 
-Created a dynamic module foar creating an API on AWS, in this example i use the api to create a recipe api.
+Created a dynamic module foar creating an API on the AWS Cloud using Terraform. 
 
 In the tfvars file you need to set up your table information such as name, billing method, hash_key and main atribute.
 
@@ -15,5 +10,17 @@ So starting with the tables you can dynamically create:
 - Policies for the CRUD methods
 - Security roles
 - AWS lambda functions
-- API gateway with resources, methods and models.
-  
+- API gateway
+- API Resources
+- API Subresources
+- API Methods
+
+Things to add in the future:
+- Gateway models
+- Gateway integrations
+
+In regards to make the project work:
+- Do not forget to add your own access_key, secret_key and aws region in the variables.tf file
+- Every function is represented by it's own NodeJs project. It is needed to run npm init and npm install commands for each function
+
+
